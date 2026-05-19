@@ -6,6 +6,8 @@ namespace ProyectoSDL2.Engine.Scripts
     {
         Transform transform;
 
+        public Transform BulletTransform => transform;
+
         //Constructor, se llama cuando se crea
         public Bullet(int startPosX, int startPosY)
         {

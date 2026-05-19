@@ -3,46 +3,45 @@
     public class Player
     {
         private Transform transform;
+
+        public Transform PlayerTransform => transform;
+
         private PlayerInput input;
         private Animation playerAnim;
         private int speed = 5;
-        private float health;
+        private Health health;
 
         private List<Image> animationImages = new List<Image>();
 
-        public float Health => health;
-
-        public void SetDamage(int damage)
-        {
-            
-            health -= damage;
-
-            if(health < 0)
-            {
-                // murio
-            }
-        } 
 
         public Player(int x, int y)
         {
             transform = new Transform(x, y);
-            input = new PlayerInput(transform,speed);
+            input = new PlayerInput(transform, speed);
+            health = new Health(5); 
 
             animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
             animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
             animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
             animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
 
-
-            playerAnim = new Animation(animationImages,0.1f);
-            
+            playerAnim = new Animation(animationImages, 0.1f);
         }
 
         public void Update()
         {
             input.Update();
             playerAnim.Update();
+            health.Colision(transform);
+
+            if (health.IsDead())
+            {
+                Engine.Debug("Game Over");
+
+            }
         }
+
+        public bool IsDead() => health.IsDead();
 
         public void Render()
         {

@@ -37,7 +37,7 @@ namespace ProyectoSDL2.Engine.Scripts
             enemyList.Add(new Enemy(200, 600));
 
 
-            while (true)
+            while (!player.IsDead())
             {
                 currentTime = (float)(DateTime.Now - startTime).TotalSeconds; //calculo el tiempo actual
                 deltaTime = currentTime - lastFrameTime; //tiempo actual - tiempo del ultimo frame
@@ -48,13 +48,16 @@ namespace ProyectoSDL2.Engine.Scripts
                 Render();
             }
 
+            Engine.Debug("GAME OVER");
+            Engine.Clear();
+            Engine.Show();
+
         }
 
         static void Update()
         {
             player.Update();
 
-            player.SetDamage(10);
 
             for (int i = 0; i < enemyList.Count; i++)
             {

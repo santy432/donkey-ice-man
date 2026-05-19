@@ -6,6 +6,8 @@ namespace ProyectoSDL2.Engine.Scripts
         Transform transform;
         int speed;
 
+        float Timer = 0;    
+
         public PlayerInput(Transform playerTransform, int playerSpeed)
         {
             transform = playerTransform;
@@ -16,6 +18,8 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public void Update()
         {
+            Timer += Program.DeltaTime;
+
             if (Engine.KeyPress(Engine.KEY_A))
             {
                 transform.Translate(-1 * speed, 0);
@@ -38,8 +42,12 @@ namespace ProyectoSDL2.Engine.Scripts
 
             if (Engine.KeyPress(Engine.KEY_ESP))
             {
-                //no dispares
-                Program.AddBullet(transform.PosX, transform.PosY);
+                if (Timer >= 1)//no dispares
+                {
+                    Program.AddBullet(transform.PosX, transform.PosY);
+                    Timer = 0;
+                }
+            
             }
         }
     }
