@@ -20,10 +20,10 @@
             input = new PlayerInput(transform, speed);
             health = new Health(5); 
 
-            animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
-            animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
-            animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
-            animationImages.Add(Engine.LoadImage("assets/mario.jpg"));
+            animationImages.Add(Engine.LoadImage("assets/mario.png"));
+            animationImages.Add(Engine.LoadImage("assets/mario.png"));
+            animationImages.Add(Engine.LoadImage("assets/mario.png"));
+            animationImages.Add(Engine.LoadImage("assets/mario.png"));
 
             playerAnim = new Animation(animationImages, 0.1f);
         }

@@ -30,16 +30,6 @@ namespace ProyectoSDL2.Engine.Scripts
                 transform.Translate(1 * speed, 0);
             }
 
-            if (Engine.KeyPress(Engine.KEY_W))
-            {
-                transform.Translate(0, -1 * speed);
-            }
-
-            if (Engine.KeyPress(Engine.KEY_S))
-            {
-                transform.Translate(0, 1 * speed);
-            }
-
             if (Engine.KeyPress(Engine.KEY_ESP))
             {
                 if (Timer >= 1)//no dispares

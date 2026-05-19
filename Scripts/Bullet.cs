@@ -11,7 +11,7 @@ namespace ProyectoSDL2.Engine.Scripts
         //Constructor, se llama cuando se crea
         public Bullet(int startPosX, int startPosY)
         {
-            transform = new Transform(startPosX + 100, startPosY + 50);
+            transform = new Transform(startPosX + 70, startPosY + 10);
         }
 
         public void Update()

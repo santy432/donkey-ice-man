@@ -8,9 +8,11 @@ namespace ProyectoSDL2.Engine.Scripts
 
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Bullet> bulletList = new List<Bullet>();
+        static List<Portal> portalList = new List<Portal>();
 
         public static List<Enemy> EnemyList => enemyList;
         public static List<Bullet> BulletList => bulletList;
+        public static List<Portal> PortalList => portalList;
 
 
         static float deltaTime;
@@ -30,12 +32,13 @@ namespace ProyectoSDL2.Engine.Scripts
             float timerLog = 0;
 
 
-            player = new Player(100, 600);
+            player = new Player(100, 650);
 
             enemyList.Add(new Enemy(200, 200));
             enemyList.Add(new Enemy(200, 400));
-            enemyList.Add(new Enemy(200, 600));
+            enemyList.Add(new Enemy(200, 650));
 
+            portalList.Add(new Portal(700, 650));
 
             while (!player.IsDead())
             {
@@ -85,6 +88,11 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 Bullet bullet = bulletList[i];
                 bullet.Render();
+            }
+            for (int i = 0; i < portalList.Count; i++)
+            {
+                Portal portal = portalList[i];
+                portal.Render();
             }
 
             Engine.Show();
