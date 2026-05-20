@@ -37,7 +37,6 @@
             if (health.IsDead())
             {
                 Engine.Debug("Game Over");
-
             }
         }
 
@@ -48,5 +47,9 @@
             Engine.Draw(playerAnim.currentFrame, transform.PosX, transform.PosY);
         }
 
+        public void SetPosition(int x, int y)
+        {
+            transform.SetPosition(x, y);
+        }
     }
 }

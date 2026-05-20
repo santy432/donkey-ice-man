@@ -10,7 +10,9 @@ namespace ProyectoSDL2.Engine
     public class Portal
     {
         Transform transform;
-        Image portalImg;
+
+        public int PosX => transform.PosX;
+        public int PosY => transform.PosY;
 
         public Portal(int x, int y)
         {

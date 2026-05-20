@@ -38,7 +38,8 @@ namespace ProyectoSDL2.Engine.Scripts
             enemyList.Add(new Enemy(200, 400));
             enemyList.Add(new Enemy(200, 650));
 
-            portalList.Add(new Portal(700, 650));
+            portalList.Add(new Portal(900, 650));
+            portalList.Add(new Portal(100, 400));
 
             while (!player.IsDead())
             {
@@ -61,6 +62,8 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             player.Update();
 
+            CheckPortalCollision();
+
 
             for (int i = 0; i < enemyList.Count; i++)
             {
@@ -71,6 +74,32 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 Bullet bullet = bulletList[i];
                 bullet.Update();
+            }
+        }
+
+        static void CheckPortalCollision() 
+        {
+            if (portalList.Count < 2)
+                return;
+
+            Portal portalA = portalList[0]; //primer portal = portalA y segundo portal es portalB
+            Portal portalB = portalList[1];
+
+            int playerX = player.PlayerTransform.PosX;
+            int playerY = player.PlayerTransform.PosY;
+
+            // colision con portal A
+            if (Math.Abs(playerX - portalA.PosX) < 50 &&
+                Math.Abs(playerY - portalA.PosY) < 50)
+            {
+                player.SetPosition(portalB.PosX + 60, portalB.PosY);
+            }
+                                                                    //Si la distancia entre el jugador y el portal es menor de 50, le cambia la posicion al jugador
+            // colision con portal B
+            else if (Math.Abs(playerX - portalB.PosX) < 50 &&
+                     Math.Abs(playerY - portalB.PosY) < 50)
+            {
+                player.SetPosition(portalA.PosX - 60, portalA.PosY);
             }
         }
 

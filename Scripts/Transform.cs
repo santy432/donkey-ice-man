@@ -25,6 +25,12 @@ namespace ProyectoSDL2.Engine.Scripts
             posY += movementY;
         }
 
+        public void SetPosition(int x, int y) //PARA TELETRANSPORTAR
+        {
+            posX = x;
+            posY = y;
+        }
+
         //rotacion
         //calcular distancia
         //etc
