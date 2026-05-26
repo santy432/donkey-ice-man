@@ -40,6 +40,8 @@ namespace ProyectoSDL2.Engine.Scripts
 
             portalList.Add(new Portal(900, 650));
             portalList.Add(new Portal(100, 400));
+            portalList.Add(new Portal(900, 400));
+            portalList.Add(new Portal(100, 150));
 
             while (!player.IsDead())
             {
@@ -79,11 +81,13 @@ namespace ProyectoSDL2.Engine.Scripts
 
         static void CheckPortalCollision() 
         {
-            if (portalList.Count < 2)
+            if (portalList.Count < 4)
                 return;
 
             Portal portalA = portalList[0]; //primer portal = portalA y segundo portal es portalB
             Portal portalB = portalList[1];
+            Portal portalC = portalList[2];
+            Portal portalD = portalList[3];
 
             int playerX = player.PlayerTransform.PosX;
             int playerY = player.PlayerTransform.PosY;
@@ -100,6 +104,20 @@ namespace ProyectoSDL2.Engine.Scripts
                      Math.Abs(playerY - portalB.PosY) < 50)
             {
                 player.SetPosition(portalA.PosX - 60, portalA.PosY);
+            }
+
+            // colision con portal C
+            else if (Math.Abs(playerX - portalC.PosX) < 50 &&
+                     Math.Abs(playerY - portalC.PosY) < 50)
+            {
+                player.SetPosition(portalD.PosX + 60, portalD.PosY);
+            }
+
+            // colision con portal D
+            else if (Math.Abs(playerX - portalD.PosX) < 50 &&
+                     Math.Abs(playerY - portalD.PosY) < 50)
+            {
+                player.SetPosition(portalC.PosX - 60, portalC.PosY);
             }
         }
 
