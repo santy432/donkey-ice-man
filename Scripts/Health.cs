@@ -23,7 +23,7 @@ namespace ProyectoSDL2.Engine
             damageCooldown -= Program.DeltaTime;
 
 
-            for (int i = Program.EnemyList.Count - 1; i >= 0; i--) 
+            for (int i = Program.EnemyList.Count - 1; i >= 0; i--)
             {
                 Enemy enemy = Program.EnemyList[i];
 
@@ -38,7 +38,7 @@ namespace ProyectoSDL2.Engine
                     {
                         Engine.Debug("Colision bala-enemigo");
                         Program.BulletList.RemoveAt(j);
-                        enemy.GetDamaged(1); 
+                        enemy.GetDamaged(1);
                         return true;
                     }
                 }
@@ -62,6 +62,16 @@ namespace ProyectoSDL2.Engine
         }
 
         public bool IsDead() => vida <= 0;
+
+        public void TakeDamage(int dmg)
+        {
+            if (damageCooldown <= 0f)
+            {
+                vida -= dmg;
+                damageCooldown = damageCooldownMax;
+                Engine.Debug($"Jugador golpeado por proyectil! Vida: {vida}");
+            }
+        }
 
     }
 }

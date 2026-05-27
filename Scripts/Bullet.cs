@@ -33,6 +33,21 @@ namespace ProyectoSDL2.Engine.Scripts
                 }
             }
 
+            for (int i = 0; i < Program.TankEnemyList.Count; i++)
+            {
+                TankEnemy tankEnemy = Program.TankEnemyList[i];
+
+                if ((transform.PosX < tankEnemy.Transform.PosX + 60) &&
+                    (transform.PosX + 7 > tankEnemy.Transform.PosX) &&
+                    (transform.PosY < tankEnemy.Transform.PosY + 90) &&
+                    (transform.PosY + 26 > tankEnemy.Transform.PosY))
+                {
+                    tankEnemy.GetDamaged(1);
+                    Program.BulletList.Remove(this);
+                    return;
+                }
+            }
+
         }
 
         public void Render()

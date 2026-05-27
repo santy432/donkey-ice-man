@@ -22,6 +22,9 @@
       <None Update="assets\fondo.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="assets\hammer.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="assets\mario.jpeg">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
@@ -47,6 +50,9 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="assets\Ship\Idle\3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="assets\tank_enemy.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="Fonts\arial.ttf">

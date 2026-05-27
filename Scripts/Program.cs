@@ -9,6 +9,12 @@ namespace ProyectoSDL2.Engine.Scripts
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Bullet> bulletList = new List<Bullet>();
         static List<Portal> portalList = new List<Portal>();
+        static List<TankEnemy> tankEnemyList = new List<TankEnemy>();
+        static List<TankProjectile> tankProjectileList = new List<TankProjectile>();
+
+        public static List<TankEnemy> TankEnemyList => tankEnemyList;
+        public static List<TankProjectile> TankProjectileList => tankProjectileList;
+        public static Player Player => player;
 
         public static List<Enemy> EnemyList => enemyList;
         public static List<Bullet> BulletList => bulletList;
@@ -35,7 +41,7 @@ namespace ProyectoSDL2.Engine.Scripts
             player = new Player(100, 650);
 
             enemyList.Add(new Enemy(200, 200));
-            enemyList.Add(new Enemy(200, 400));
+            tankEnemyList.Add(new TankEnemy(200, 400));
             enemyList.Add(new Enemy(200, 650));
 
             portalList.Add(new Portal(900, 650));
@@ -76,6 +82,14 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 Bullet bullet = bulletList[i];
                 bullet.Update();
+            }
+            for (int i = 0; i < tankEnemyList.Count; i++)
+            {
+                tankEnemyList[i].Update();
+            }
+            for (int i = 0; i < tankProjectileList.Count; i++)
+            {
+                tankProjectileList[i].Update();
             }
         }
 
@@ -141,6 +155,15 @@ namespace ProyectoSDL2.Engine.Scripts
                 Portal portal = portalList[i];
                 portal.Render();
             }
+            for (int i = 0; i < tankEnemyList.Count; i++)
+            {
+                tankEnemyList[i].Render();
+            }
+            for (int i = 0; i < tankProjectileList.Count; i++)
+            {
+                tankProjectileList[i].Render();
+            }
+
 
             Engine.Show();
         }
@@ -150,6 +173,11 @@ namespace ProyectoSDL2.Engine.Scripts
             bulletList.Add(new Bullet(posX, posY));
         }
 
+
+        public static void AddTankProjectile(int posX, int posY, int targetX, int targetY)
+        {
+            tankProjectileList.Add(new TankProjectile(posX, posY, targetX, targetY));
+        }
     }
 
 }

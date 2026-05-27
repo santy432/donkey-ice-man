@@ -51,5 +51,10 @@
         {
             transform.SetPosition(x, y);
         }
+
+        public void TakeDamage(int dmg)
+        {
+            health.TakeDamage(dmg);
+        }
     }
 }

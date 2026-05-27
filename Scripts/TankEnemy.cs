@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProyectoSDL2.Engine.Scripts
+{
+    public class TankEnemy
+    {
+        Transform transform;
+        int health = 10;
+        int speed = 1;
+        int preferredDistance = 300;
+        float shootTimer = 0f;
+        float shootCooldown = 2f;
+
+        Image tankImg;
+        Font arialFont;
+
+        public Transform Transform => transform;
+
+        public TankEnemy(int x, int y)
+        {
+            transform = new Transform(x, y);
+            tankImg = Engine.LoadImage("assets/tank_enemy.png");
+            arialFont = Engine.LoadFont("Fonts/arial.ttf", 30);
+        }
+
+        public void Update()
+        {
+            shootTimer += Program.DeltaTime;
+
+            Transform playerTransform = Program.Player.PlayerTransform;
+            int dx = playerTransform.PosX - transform.PosX;
+            int distance = Math.Abs(dx);
+            int direction = dx > 0 ? 1 : -1;
+
+            if (distance > preferredDistance + 50)
+                transform.Translate(speed * direction, 0);
+            else if (distance < preferredDistance - 50)
+                transform.Translate(-speed * direction, 0);
+
+            if (transform.PosX < 0) transform.SetPosition(0, transform.PosY);
+            if (transform.PosX > 1000) transform.SetPosition(1000, transform.PosY);
+
+            if (shootTimer >= shootCooldown)
+            {
+                Shoot();
+                shootTimer = 0f;
+            }
+        }
+
+        void Shoot()
+        {
+            Transform playerTransform = Program.Player.PlayerTransform;
+            Program.AddTankProjectile(
+                transform.PosX,
+                transform.PosY,
+                playerTransform.PosX,
+                playerTransform.PosY
+            );
+        }
+
+
+
+        public void GetDamaged(int dmg)
+        {
+            health -= dmg;
+            Engine.Debug($"TankEnemy queda {health} de vida");
+            if (health <= 0)
+                Program.TankEnemyList.Remove(this);
+        }
+
+        public void Render()
+        {
+            Engine.DrawText(health.ToString(), transform.PosX + 13, transform.PosY - 30, 0, 0, 0, arialFont);
+            Engine.Draw(tankImg, transform.PosX, transform.PosY);
+        }
+    }
+}

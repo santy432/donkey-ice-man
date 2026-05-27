@@ -1,37 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\",
+  "WorkspaceRootPath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\tankprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\tankprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\tankenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\tankenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\pauli\\onedrive\\documentos\\github\\donkey-ice-man\\engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,40 +54,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Scripts\\Health.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Health.cs",
+              "RelativeToolTip": "Scripts\\Health.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwD8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T02:27:34.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TankEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankEnemy.cs",
+              "RelativeDocumentMoniker": "Scripts\\TankEnemy.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankEnemy.cs",
+              "RelativeToolTip": "Scripts\\TankEnemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T02:02:59.208Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TankProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
+              "RelativeDocumentMoniker": "Scripts\\TankProjectile.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
+              "RelativeToolTip": "Scripts\\TankProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:48:17.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
               "RelativeDocumentMoniker": "Scripts\\Program.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
               "RelativeToolTip": "Scripts\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAuwK8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T17:30:15.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Enemy.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:30:16.144Z"
+              "WhenOpened": "2026-05-12T17:30:16.144Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Animation.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Animation.cs",
               "RelativeDocumentMoniker": "Scripts\\Animation.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Animation.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Animation.cs",
               "RelativeToolTip": "Scripts\\Animation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,11 +139,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Engine.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Engine\\Engine.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Engine\\Engine.cs",
               "RelativeDocumentMoniker": "Engine\\Engine.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Engine\\Engine.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Engine\\Engine.cs",
               "RelativeToolTip": "Engine\\Engine.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAgwGIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -95,11 +151,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "PlayerInput.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\PlayerInput.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\PlayerInput.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerInput.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\PlayerInput.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\PlayerInput.cs",
               "RelativeToolTip": "Scripts\\PlayerInput.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwCgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,37 +163,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Player.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAD4vxkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:30:16.192Z"
+              "WhenOpened": "2026-05-12T17:30:16.192Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Transform.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Transform.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Transform.cs",
               "RelativeDocumentMoniker": "Scripts\\Transform.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Transform.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Transform.cs",
               "RelativeToolTip": "Scripts\\Transform.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIAwwA8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAIAwwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:30:16.192Z"
+              "WhenOpened": "2026-05-12T17:30:16.192Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Scripts\\Bullet.cs",
-              "ToolTip": "C:\\Users\\pauli\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwDAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T17:30:16.192Z",
               "EditorCaption": ""
