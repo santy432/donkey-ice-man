@@ -25,25 +25,29 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public override void Update()
         {
-            shootTimer += Program.DeltaTime;
-
-            Transform playerTransform = GameManager.Instance.Player.Transform;
-            int dx = playerTransform.PosX - transform.PosX;
-            int distance = Math.Abs(dx);
-            int direction = dx > 0 ? 1 : -1;
-
-            if (distance > preferredDistance + 50)
-                transform.Translate(speed * direction, 0);
-            else if (distance < preferredDistance - 50)
-                transform.Translate(-speed * direction, 0);
-
-            if (transform.PosX < 0) transform.SetPosition(0, transform.PosY);
-            if (transform.PosX > 1000) transform.SetPosition(1000, transform.PosY);
-
-            if (shootTimer >= shootCooldown)
+            if (GameManager.Instance.Player != null) if (GameManager.Instance.Player != null)
             {
-                Shoot();
-                shootTimer = 0f;
+
+                shootTimer += Program.DeltaTime;
+
+                Transform playerTransform = GameManager.Instance.Player.Transform;
+                int dx = playerTransform.PosX - transform.PosX;
+                int distance = Math.Abs(dx);
+                int direction = dx > 0 ? 1 : -1;
+
+                if (distance > preferredDistance + 50)
+                    transform.Translate(speed * direction, 0);
+                else if (distance < preferredDistance - 50)
+                    transform.Translate(-speed * direction, 0);
+
+                if (transform.PosX < 0) transform.SetPosition(0, transform.PosY);
+                if (transform.PosX > 1000) transform.SetPosition(1000, transform.PosY);
+
+                if (shootTimer >= shootCooldown)
+                {
+                    Shoot();
+                    shootTimer = 0f;
+                }
             }
         }
 
