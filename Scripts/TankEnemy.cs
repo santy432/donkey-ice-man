@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class TankEnemy
+    public class TankEnemy : GameObject, IDamageable
     {
-        Transform transform;
         int health = 10;
         int speed = 1;
         int preferredDistance = 300;
@@ -18,16 +17,14 @@ namespace ProyectoSDL2.Engine.Scripts
         Image tankImg;
         Font arialFont;
 
-        public Transform Transform => transform;
-
-        public TankEnemy(int x, int y)
+        public TankEnemy(int x, int y) : base(x, y)
         {
             transform = new Transform(x, y);
             tankImg = Engine.LoadImage("assets/tank_enemy.png");
             arialFont = Engine.LoadFont("Fonts/arial.ttf", 30);
         }
 
-        public void Update()
+        public override void Update()
         {
             shootTimer += Program.DeltaTime;
 
@@ -69,10 +66,10 @@ namespace ProyectoSDL2.Engine.Scripts
             health -= dmg;
             Engine.Debug($"TankEnemy queda {health} de vida");
             if (health <= 0)
-                Program.TankEnemyList.Remove(this);
+                this.IsActive = false;
         }
 
-        public void Render()
+        public override void Render()
         {
             Engine.DrawText(health.ToString(), transform.PosX + 13, transform.PosY - 30, 0, 0, 0, arialFont);
             Engine.Draw(tankImg, transform.PosX, transform.PosY);

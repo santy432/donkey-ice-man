@@ -2,30 +2,20 @@
 
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class Bullet
+    public class Bullet : GameObject
     {
-        Transform transform;
 
         int direction; // 1= derecha, -1= izquierda
 
-        public Transform BulletTransform => transform;
-
         //Constructor, se llama cuando se crea
-        public Bullet(int startPosX, int startPosY, int bulletDirection) //bulletDirection 
+        // Si la dirección es 1 sumamos 70 a X, sino, la dejamos normal. A la Y siempre le sumamos 10.
+        public Bullet(int startPosX, int startPosY, int bulletDirection)
+               : base(bulletDirection == 1 ? startPosX + 70 : startPosX, startPosY + 10)
         {
             direction = bulletDirection;
-
-            if (direction == 1)
-            {
-                transform = new Transform(startPosX + 70, startPosY + 10);
-            }
-            else
-            {
-                transform = new Transform(startPosX, startPosY + 10);
-            }
         }
 
-        public void Update()
+        public override void Update()
         {
             transform.Translate(5 * direction, 0); // direction es 1 cuando mira a la derecha y 2 cuando mira a la izquierda
 
@@ -61,7 +51,7 @@ namespace ProyectoSDL2.Engine.Scripts
 
         }
 
-        public void Render()
+        public override void Render()
         {
             Engine.Draw("assets/bullet.png", transform.PosX, transform.PosY);
         }

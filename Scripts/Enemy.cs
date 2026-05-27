@@ -1,9 +1,8 @@
 ﻿
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class Enemy
+    public class Enemy : GameObject, IDamageable
     {
-        Transform transform;
         int speed = 3;
         Image playerImg;
 
@@ -11,16 +10,14 @@ namespace ProyectoSDL2.Engine.Scripts
 
         Font arialFont;
 
-        public Transform Transform => transform;
-
-        public Enemy(int x, int y)
+        public Enemy(int x, int y) : base(x, y)
         {
             transform = new Transform(x, y);
             playerImg = Engine.LoadImage("assets/enemy.png");
             arialFont = Engine.LoadFont("Fonts/arial.ttf", 30);
         }
 
-        public void Update()
+        public override void Update()
         {
             transform.Translate(speed, 0);
 
@@ -37,12 +34,12 @@ namespace ProyectoSDL2.Engine.Scripts
             Engine.Debug($"Queda {health} de vida");
             if (health <= 0)
             {
-                //explosion
-                Program.EnemyList.Remove(this);
+                // desactivamos
+                this.IsActive = false;
             }
         }
 
-        public void Render()
+        public override void Render()
         {
             Engine.DrawText(health.ToString(), transform.PosX + 13, transform.PosY - 30, 0, 0, 0, arialFont);
             Engine.Draw(playerImg, transform.PosX, transform.PosY);

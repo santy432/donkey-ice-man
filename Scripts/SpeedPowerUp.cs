@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class SpeedPowerUp
+    public class SpeedPowerUp : GameObject
     {
-        private Transform transform;
         private Image image;
 
         public int PosX => transform.PosX;
         public int PosY => transform.PosY;
 
-        public SpeedPowerUp(int x, int y)
+        public SpeedPowerUp(int x, int y) : base(x, y)
         {
             transform = new Transform(x, y);
 
             image = Engine.LoadImage("assets/speed.png");
         }
+        
+        public override void Update()
+        {
 
-        public void Render()
+        }
+
+        public override void Render()
         {
             Engine.Draw(image, transform.PosX, transform.PosY);
         }

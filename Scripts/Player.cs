@@ -1,10 +1,7 @@
 ﻿namespace ProyectoSDL2.Engine.Scripts
 {
-    public class Player
+    public class Player : GameObject
     {
-        private Transform transform;
-
-        public Transform PlayerTransform => transform;
 
         private PlayerInput input;
         private Animation playerAnim;
@@ -22,7 +19,7 @@
         public bool FacingRight => facingRight;
 
 
-        public Player(int x, int y) 
+        public Player(int x, int y) : base(x, y)
         {
             transform = new Transform(x, y);
             input = new PlayerInput(transform, speed);
@@ -33,7 +30,7 @@
 
         }
 
-        public void Update()
+        public override void Update()
         {
             input.Update();
             health.Colision(transform);
@@ -57,7 +54,7 @@
 
         public bool IsDead() => health.IsDead();
 
-        public void Render()
+        public override void Render()
         {
             if (facingRight)
             {
