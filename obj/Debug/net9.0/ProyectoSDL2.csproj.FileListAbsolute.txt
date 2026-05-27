@@ -388,7 +388,6 @@ D:\programacion\DIM github\donkey-ice-man\obj\Debug\net9.0\refint\ProyectoSDL2.d
 D:\programacion\DIM github\donkey-ice-man\obj\Debug\net9.0\ProyectoSDL2.pdb
 D:\programacion\DIM github\donkey-ice-man\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
 D:\programacion\DIM github\donkey-ice-man\obj\Debug\net9.0\ref\ProyectoSDL2.dll
-D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\portal.png
 C:\Users\pauli\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\libFLAC-8.dll
 C:\Users\pauli\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\libjpeg-9.dll
@@ -485,3 +484,5 @@ C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\hammer.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\tank_enemy.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\speed.png
+D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario left.png
+D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario right.png

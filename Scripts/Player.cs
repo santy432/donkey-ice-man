@@ -11,7 +11,8 @@
         private int speed = 5;
         private Health health;
 
-        private List<Image> animationImages = new List<Image>();
+        private Image playerRight; // para determinar izq o derecha
+        private Image playerLeft;
 
         private float speedBoostTimer = 0;
         private bool speedBoostActive = false;
@@ -21,24 +22,20 @@
         public bool FacingRight => facingRight;
 
 
-        public Player(int x, int y)
+        public Player(int x, int y) 
         {
             transform = new Transform(x, y);
             input = new PlayerInput(transform, speed);
             health = new Health(5);
 
-            animationImages.Add(Engine.LoadImage("assets/mario.png"));
-            animationImages.Add(Engine.LoadImage("assets/mario.png"));
-            animationImages.Add(Engine.LoadImage("assets/mario.png"));
-            animationImages.Add(Engine.LoadImage("assets/mario.png"));
+            playerRight = Engine.LoadImage("assets/mario right.png");
+            playerLeft = Engine.LoadImage("assets/mario left.png");
 
-            playerAnim = new Animation(animationImages, 0.1f);
         }
 
         public void Update()
         {
             input.Update();
-            playerAnim.Update();
             health.Colision(transform);
 
             if (speedBoostActive)
@@ -62,7 +59,14 @@
 
         public void Render()
         {
-            Engine.Draw(playerAnim.currentFrame, transform.PosX, transform.PosY);
+            if (facingRight)
+            {
+                Engine.Draw(playerRight, transform.PosX, transform.PosY);
+            }
+            else
+            {
+                Engine.Draw(playerLeft, transform.PosX, transform.PosY);
+            }
         }
 
         public void SetPosition(int x, int y)

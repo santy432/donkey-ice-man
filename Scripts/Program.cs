@@ -196,9 +196,9 @@ namespace ProyectoSDL2.Engine.Scripts
             Engine.Show();
         }
 
-        public static void AddBullet(int posX, int posY)
+        public static void AddBullet(int posX, int posY, int direction)
         {
-            bulletList.Add(new Bullet(posX, posY));
+            bulletList.Add(new Bullet(posX, posY, direction));
         }
 
 

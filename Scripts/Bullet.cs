@@ -6,17 +6,28 @@ namespace ProyectoSDL2.Engine.Scripts
     {
         Transform transform;
 
+        int direction; // 1= derecha, -1= izquierda
+
         public Transform BulletTransform => transform;
 
         //Constructor, se llama cuando se crea
-        public Bullet(int startPosX, int startPosY)
+        public Bullet(int startPosX, int startPosY, int bulletDirection) //bulletDirection 
         {
-            transform = new Transform(startPosX + 70, startPosY + 10);
+            direction = bulletDirection;
+
+            if (direction == 1)
+            {
+                transform = new Transform(startPosX + 70, startPosY + 10);
+            }
+            else
+            {
+                transform = new Transform(startPosX, startPosY + 10);
+            }
         }
 
         public void Update()
         {
-            transform.Translate(5, 0);
+            transform.Translate(5 * direction, 0); // direction es 1 cuando mira a la derecha y 2 cuando mira a la izquierda
 
             for (int i = 0; i < Program.EnemyList.Count; i++)
             {

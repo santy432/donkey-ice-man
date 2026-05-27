@@ -25,6 +25,12 @@
       <None Update="assets\hammer.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="assets\mario left.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="assets\mario right.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="assets\mario.jpeg">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
