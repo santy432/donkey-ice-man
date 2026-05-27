@@ -15,8 +15,6 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public SpeedPowerUp(int x, int y) : base(x, y)
         {
-            transform = new Transform(x, y);
-
             image = Engine.LoadImage("assets/speed.png");
         }
         

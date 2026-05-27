@@ -21,7 +21,6 @@
 
         public Player(int x, int y) : base(x, y)
         {
-            transform = new Transform(x, y);
             input = new PlayerInput(transform, speed);
             health = new Health(5);
 

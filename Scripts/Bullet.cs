@@ -19,36 +19,29 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             transform.Translate(5 * direction, 0); // direction es 1 cuando mira a la derecha y 2 cuando mira a la izquierda
 
-            for (int i = 0; i < Program.EnemyList.Count; i++)
+            for (int i = 0; i < GameManager.Instance.GameObjects.Count; i++)
             {
-                Enemy currentEnemy = Program.EnemyList[i];
+                GameObject obj = GameManager.Instance.GameObjects[i];
 
 
-                if ((transform.PosX < currentEnemy.Transform.PosX + 60) &&
-                    (transform.PosX + 7 > currentEnemy.Transform.PosX) &&
-                    (transform.PosY < currentEnemy.Transform.PosY + 90) &&
-                    (transform.PosY + 26 > currentEnemy.Transform.PosY))
+                // ignoramos bala o a objetos inactivos
+                if (!obj.IsActive || obj == this) continue;
+
+                // checkeo colisión general
+                if ((transform.PosX < obj.Transform.PosX + 60) &&
+                    (transform.PosX + 7 > obj.Transform.PosX) &&
+                    (transform.PosY < obj.Transform.PosY + 90) &&
+                    (transform.PosY + 26 > obj.Transform.PosY))
                 {
-                    currentEnemy.GetDamaged(1);
-                    Program.BulletList.Remove(this);
+                    // objeto con etiqueta iDamageable = hace daño
+                    if (obj is IDamageable damageableTarget)
+                    {
+                        damageableTarget.GetDamaged(1); // le hace daño (sea tank, enemy o algun jefe)
+                        this.IsActive = false;
+                        return; // salimos del bucle para que la bala no atraviese y dañe a dos juntos
+                    }
                 }
             }
-
-            for (int i = 0; i < Program.TankEnemyList.Count; i++)
-            {
-                TankEnemy tankEnemy = Program.TankEnemyList[i];
-
-                if ((transform.PosX < tankEnemy.Transform.PosX + 60) &&
-                    (transform.PosX + 7 > tankEnemy.Transform.PosX) &&
-                    (transform.PosY < tankEnemy.Transform.PosY + 90) &&
-                    (transform.PosY + 26 > tankEnemy.Transform.PosY))
-                {
-                    tankEnemy.GetDamaged(1);
-                    Program.BulletList.Remove(this);
-                    return;
-                }
-            }
-
         }
 
         public override void Render()

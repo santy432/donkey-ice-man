@@ -14,7 +14,6 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public Portal(int x, int y) : base(x, y)
         {
-            transform = new Transform(x, y);
         }
 
         public override void Update()

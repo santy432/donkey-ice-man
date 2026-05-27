@@ -19,7 +19,6 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public TankEnemy(int x, int y) : base(x, y)
         {
-            transform = new Transform(x, y);
             tankImg = Engine.LoadImage("assets/tank_enemy.png");
             arialFont = Engine.LoadFont("Fonts/arial.ttf", 30);
         }
@@ -28,7 +27,7 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             shootTimer += Program.DeltaTime;
 
-            Transform playerTransform = Program.Player.PlayerTransform;
+            Transform playerTransform = GameManager.Instance.Player.Transform;
             int dx = playerTransform.PosX - transform.PosX;
             int distance = Math.Abs(dx);
             int direction = dx > 0 ? 1 : -1;
@@ -50,13 +49,13 @@ namespace ProyectoSDL2.Engine.Scripts
 
         void Shoot()
         {
-            Transform playerTransform = Program.Player.PlayerTransform;
-            Program.AddTankProjectile(
-                transform.PosX,
-                transform.PosY,
-                playerTransform.PosX,
-                playerTransform.PosY
-            );
+            Transform playerTransform = GameManager.Instance.Player.Transform;
+            GameManager.Instance.AddObject(new TankProjectile(
+                    transform.PosX,
+                    transform.PosY,
+                    playerTransform.PosX,
+                    playerTransform.PosY
+                ));
         }
 
 

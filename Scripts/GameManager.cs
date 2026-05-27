@@ -7,7 +7,6 @@ namespace ProyectoSDL2.Engine.Scripts
         // Instancia privada del Singleton
         private static GameManager instance;
 
-        // Propiedad pública para acceder desde cualquier parte del código
         public static GameManager Instance
         {
             get

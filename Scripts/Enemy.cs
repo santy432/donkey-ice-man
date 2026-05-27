@@ -12,7 +12,6 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public Enemy(int x, int y) : base(x, y)
         {
-            transform = new Transform(x, y);
             playerImg = Engine.LoadImage("assets/enemy.png");
             arialFont = Engine.LoadFont("Fonts/arial.ttf", 30);
         }

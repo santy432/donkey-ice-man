@@ -24,21 +24,21 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 transform.Translate(-1 * speed, 0);
 
-                Program.Player.SetDirection(false);
+               GameManager.Instance.Player.SetDirection(false);
             }
 
             if (Engine.KeyPress(Engine.KEY_D))
             {
                 transform.Translate(1 * speed, 0);
 
-                Program.Player.SetDirection(true);
+                GameManager.Instance.Player.SetDirection(true);
             }
 
             if (Engine.KeyPress(Engine.KEY_ESP))
             {
                 if (Timer >= 1)//no dispares
                 {
-                    int direction = Program.Player.FacingRight ? 1 : -1; // ternary operator, basicamente "if right = true, direction = 1", else direction = -1
+                    int direction = GameManager.Instance.Player.FacingRight ? 1 : -1; // ternary operator, basicamente "if right = true, direction = 1", else direction = -1
 
                     Program.AddBullet(transform.PosX, transform.PosY, direction);
                     Timer = 0;

@@ -5,7 +5,7 @@ namespace ProyectoSDL2.Engine.Scripts
     {
         protected Transform transform;
         public Transform Transform => transform;
-        public bool IsActive { get; set; } = true; // Útil para destruir objetos
+        public bool IsActive { get; set; } = true; // util para destruir objetos
 
         public GameObject(int startPosX, int startPosY)
         {

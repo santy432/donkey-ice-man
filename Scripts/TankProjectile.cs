@@ -6,41 +6,36 @@ using System.Threading.Tasks;
 
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class TankProjectile
+    public class TankProjectile : GameObject
     {
-        Transform transform;
         float velX;
         float velY;
         float accumulatedX;
         float accumulatedY;
 
-        public Transform ProjectileTransform => transform;
-
-        public TankProjectile(int startPosX, int startPosY, int targetX, int targetY)
+        //base(startPosX, startPosY) para que el padre inicialice el transform
+        public TankProjectile(int startPosX, int startPosY, int targetX, int targetY) : base(startPosX, startPosY)
         {
-            transform = new Transform(startPosX, startPosY);
-
             int dx = targetX - startPosX;
-            int dy = targetY - startPosY; 
+            int dy = targetY - startPosY;
             float gravity = 0.3f;
             float launchVelY = -10f;
 
-
             float a = 0.5f * gravity;
             float b = launchVelY;
-            float c = -dy; 
+            float c = -dy;
 
             float discriminant = (b * b) - (4 * a * c);
-            float timeOfFlight = (-b + MathF.Sqrt(discriminant)) / (2 * a); 
+            float timeOfFlight = (-b + MathF.Sqrt(discriminant)) / (2 * a);
 
             velX = dx / timeOfFlight;
             velY = launchVelY;
         }
 
-        public void Update()
+        public override void Update()
         {
             float gravity = 0.3f;
-            velY += gravity;    
+            velY += gravity;
 
             accumulatedX += velX;
             accumulatedY += velY;
@@ -55,25 +50,28 @@ namespace ProyectoSDL2.Engine.Scripts
                 accumulatedY -= moveY;
             }
 
-            Transform playerTransform = Program.Player.PlayerTransform;
+            // buscamos al jugador a traves de GameManager
+            Transform playerTransform = GameManager.Instance.Player.Transform;
 
             if (transform.PosX < playerTransform.PosX + 64 &&
                 transform.PosX + 20 > playerTransform.PosX &&
                 transform.PosY < playerTransform.PosY + 64 &&
                 transform.PosY + 20 > playerTransform.PosY)
             {
-                Program.Player.TakeDamage(1);
-                Program.TankProjectileList.Remove(this);
+                // damage a traves de gamemanager
+                GameManager.Instance.Player.TakeDamage(1);
+
+                this.IsActive = false;
                 return;
             }
 
             if (transform.PosX < -100 || transform.PosX > 1200 || transform.PosY > 900 || transform.PosY < -200)
             {
-                Program.TankProjectileList.Remove(this);
+                this.IsActive = false;
             }
         }
 
-        public void Render()
+        public override void Render()
         {
             Engine.Draw("assets/hammer.png", transform.PosX, transform.PosY);
         }

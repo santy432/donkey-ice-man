@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoSDL2.Engine
+namespace ProyectoSDL2.Engine.Scripts
 {
     public class Health
     {
@@ -22,39 +22,43 @@ namespace ProyectoSDL2.Engine
         {
             damageCooldown -= Program.DeltaTime;
 
-
-            for (int i = Program.EnemyList.Count - 1; i >= 0; i--)
+            for (int i = 0; i < GameManager.Instance.GameObjects.Count; i++)
             {
-                Enemy enemy = Program.EnemyList[i];
+                GameObject obj = GameManager.Instance.GameObjects[i];
 
+                if (!obj.IsActive) continue;
 
-                for (int j = Program.BulletList.Count - 1; j >= 0; j--)
+                if (obj is Enemy enemy)
                 {
-                    Bullet bullet = Program.BulletList[j];
-                    if (enemy.Transform.PosX < bullet.BulletTransform.PosX + 7 &&
-                        enemy.Transform.PosX + 64 > bullet.BulletTransform.PosX &&
-                        enemy.Transform.PosY < bullet.BulletTransform.PosY + 26 &&
-                        enemy.Transform.PosY + 99 > bullet.BulletTransform.PosY)
+                    if (playerTransform.PosX < enemy.Transform.PosX + 64 &&
+                        playerTransform.PosX + 64 > enemy.Transform.PosX &&
+                        playerTransform.PosY < enemy.Transform.PosY + 99 &&
+                        playerTransform.PosY + 64 > enemy.Transform.PosY)
                     {
-                        Engine.Debug("Colision bala-enemigo");
-                        Program.BulletList.RemoveAt(j);
-                        enemy.GetDamaged(1);
-                        return true;
+                        if (damageCooldown <= 0)
+                        {
+                            Engine.Debug("Jugador golpeado por enemigo");
+                            vida--;
+                            damageCooldown = damageCooldownMax;
+                            return true;
+                        }
                     }
                 }
 
-
-                if (playerTransform.PosX < enemy.Transform.PosX + 64 &&
-                    playerTransform.PosX + 64 > enemy.Transform.PosX &&
-                    playerTransform.PosY < enemy.Transform.PosY + 99 &&
-                    playerTransform.PosY + 64 > enemy.Transform.PosY)
+                else if (obj is TankEnemy tankEnemy)
                 {
-                    if (damageCooldown <= 0)
+                    if (playerTransform.PosX < tankEnemy.Transform.PosX + 64 &&
+                        playerTransform.PosX + 64 > tankEnemy.Transform.PosX &&
+                        playerTransform.PosY < tankEnemy.Transform.PosY + 99 &&
+                        playerTransform.PosY + 64 > tankEnemy.Transform.PosY)
                     {
-                        Engine.Debug("Jugador golpeado");
-                        vida--;
-                        damageCooldown = damageCooldownMax;
-                        return true;
+                        if (damageCooldown <= 0)
+                        {
+                            Engine.Debug("Jugador golpeado por Tanque");
+                            vida--;
+                            damageCooldown = damageCooldownMax;
+                            return true;
+                        }
                     }
                 }
             }
@@ -72,6 +76,5 @@ namespace ProyectoSDL2.Engine
                 Engine.Debug($"Jugador golpeado por proyectil! Vida: {vida}");
             }
         }
-
     }
 }
