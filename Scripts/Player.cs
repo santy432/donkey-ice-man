@@ -34,6 +34,52 @@
             input.Update();
             health.Colision(transform);
 
+            for (int i = 0; i < GameManager.Instance.GameObjects.Count; i++)
+            {
+                GameObject obj = GameManager.Instance.GameObjects[i];
+
+                if (obj is Portal portal && portal.IsActive)
+                {
+                    // portal collision check
+                    if (transform.PosX < portal.Transform.PosX + 60 &&
+                        transform.PosX + 64 > portal.Transform.PosX &&
+                        transform.PosY < portal.Transform.PosY + 60 &&
+                        transform.PosY + 64 > portal.Transform.PosY)
+                    {
+
+                        // Portal A (Piso 1) -> Te lleva al Portal B (Piso 2)
+                        if (portal.Id == 'A')
+                        {
+                            Engine.Debug("Teletransportando al Piso 2 (Portal B)!");
+                            transform.SetPosition(170, 400);
+                            break; // evitar doble tp en mismo frame
+                        }
+                        // Portal C (Piso 2) -> Te lleva al Portal D (Piso 3)
+                        else if (portal.Id == 'C')
+                        {
+                            Engine.Debug("Teletransportando al Piso 3 (Portal D)!");
+                            transform.SetPosition(170, 150);
+                            break;
+                        }
+
+                        // Portal B (Piso 2) -> devuelve al Portal A (Piso 1)
+                        else if (portal.Id == 'B')
+                        {
+                            Engine.Debug("Volviendo al Piso 1 (Portal A)!");
+                            transform.SetPosition(820, 650);
+                            break;
+                        }
+                        // Portal D (Piso 3) -> devuelve al Portal C (Piso 2)
+                        else if (portal.Id == 'D')
+                        {
+                            Engine.Debug("Volviendo al Piso 2 (Portal C)!");
+                            transform.SetPosition(820, 400);
+                            break;
+                        }
+                    }
+                }
+            }
+
             if (speedBoostActive)
             {
                 speedBoostTimer -= Program.DeltaTime;

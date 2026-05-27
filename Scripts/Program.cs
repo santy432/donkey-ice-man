@@ -15,20 +15,27 @@ namespace ProyectoSDL2.Engine.Scripts
             float currentTime;
             float lastFrameTime = 0;
 
-            // 1. Creamos el jugador y lo registramos en el GameManager
+            //creamos el jugador y lo registramos en el gameManager
             Player player = new Player(100, 650);
             GameManager.Instance.Player = player;
             GameManager.Instance.AddObject(player);
 
-            // 2. Registramos los enemigos y objetos directamente en el GameManager
+            // registramos los enemigos y objetos directamente en el gameManager
             GameManager.Instance.AddObject(new TankEnemy(200, 150));
             GameManager.Instance.AddObject(new Enemy(200, 150));
             GameManager.Instance.AddObject(new Enemy(200, 400));
             GameManager.Instance.AddObject(new Enemy(200, 650));
 
-            GameManager.Instance.AddObject(new Portal(900, 650));
-            GameManager.Instance.AddObject(new Portal(100, 400));
-            
+            // Piso 1
+            GameManager.Instance.AddObject(new Portal(900, 650, 'A')); // Portal A
+
+            // Piso 2
+            GameManager.Instance.AddObject(new Portal(100, 400, 'B')); // Portal B
+            GameManager.Instance.AddObject(new Portal(900, 400, 'C')); // Portal C
+
+            // Piso 3
+            GameManager.Instance.AddObject(new Portal(100, 150, 'D')); // Portal D
+
             GameManager.Instance.AddObject(new SpeedPowerUp(450, 400));
 
             // Bucle principal del juego
@@ -38,7 +45,6 @@ namespace ProyectoSDL2.Engine.Scripts
                 deltaTime = currentTime - lastFrameTime;
                 lastFrameTime = currentTime;
 
-                // 3. LLAMAMOS AL GAMEMANAGER
                 Update();
                 Render();
             }
@@ -50,24 +56,22 @@ namespace ProyectoSDL2.Engine.Scripts
 
         static void Update()
         {
-            // El GameManager se encarga de hacer el Update de todos los objetos en su lista
+
             GameManager.Instance.Update();
-            
-            // Aquí puedes mantener funciones globales temporales de colisiones complejas si lo deseas
-            // CheckPortalCollision(); 
+
+            //CheckPortalCollision(); 
         }
 
         static void Render()
         {
             Engine.Clear();
             
-            // El GameManager dibuja todo de forma automática y ordenada
             GameManager.Instance.Render();
             
             Engine.Show();
         }
 
-        // Modificamos este método para que cuando crees una bala, se sume al GameManager
+        // cuando se creaa una bala, se suma al gameManager
         public static void AddBullet(int posX, int posY, int direction)
         {
             GameManager.Instance.AddObject(new Bullet(posX, posY, direction));

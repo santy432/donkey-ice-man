@@ -9,11 +9,11 @@ namespace ProyectoSDL2.Engine.Scripts
 {
     public class Portal : GameObject
     {
-        public int PosX => transform.PosX;
-        public int PosY => transform.PosY;
+        public char Id { get; private set; }
 
-        public Portal(int x, int y) : base(x, y)
+        public Portal(int x, int y, char id) : base(x, y)
         {
+            Id = id;
         }
 
         public override void Update()

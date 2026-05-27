@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProyectoSDL2.Engine.Scripts;
+using System;
 
 namespace ProyectoSDL2.Engine.Scripts
 {
@@ -10,17 +7,26 @@ namespace ProyectoSDL2.Engine.Scripts
     {
         private Image image;
 
-        public int PosX => transform.PosX;
-        public int PosY => transform.PosY;
-
         public SpeedPowerUp(int x, int y) : base(x, y)
         {
             image = Engine.LoadImage("assets/speed.png");
         }
-        
+
         public override void Update()
         {
+            Transform playerTransform = GameManager.Instance.Player.Transform;
 
+            if (transform.PosX < playerTransform.PosX + 64 &&
+                transform.PosX + 30 > playerTransform.PosX &&
+                transform.PosY < playerTransform.PosY + 64 &&
+                transform.PosY + 30 > playerTransform.PosY)
+            {
+                Engine.Debug("PowerUp Agarrado");
+
+                GameManager.Instance.Player.ActivateSpeedBoost(3f, 8);
+
+                this.IsActive = false;
+            }
         }
 
         public override void Render()

@@ -2,10 +2,20 @@
 
 namespace ProyectoSDL2.Engine.Scripts
 {
+
+    public enum GAME_STATE
+    {
+        START = 0,
+        GAMEPLAY = 1,
+        END = 2
+    }
+
     public class GameManager
     {
         // Instancia privada del Singleton
         private static GameManager instance;
+
+        GAME_STATE GAME_STATE = GAME_STATE.START;
 
         public static GameManager Instance
         {
@@ -51,6 +61,19 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public void Render()
         {
+
+            switch (GAME_STATE)
+            {
+                case GAME_STATE.START: //renderizar pantalla de inicio
+                    break;
+
+                case GAME_STATE.GAMEPLAY: //renderizar juego normalmente
+                    break;
+
+                case GAME_STATE.END: //renderizar pantalla de game over
+                    break;
+            }
+
             for (int i = 0; i < GameObjects.Count; i++)
             {
                 if (GameObjects[i].IsActive)
