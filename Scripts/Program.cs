@@ -16,7 +16,7 @@ namespace ProyectoSDL2.Engine.Scripts
             float lastFrameTime = 0;
 
             // Bucle principal del juego
-            while (!GameManager.Instance.Player.IsDead())
+            while (true)
             {
                 currentTime = (float)(DateTime.Now - startTime).TotalSeconds;
                 deltaTime = currentTime - lastFrameTime;
@@ -25,10 +25,6 @@ namespace ProyectoSDL2.Engine.Scripts
                 Update();
                 Render();
             }
-
-            Engine.Debug("GAME OVER");
-            Engine.Clear();
-            Engine.Show();
         }
 
         static void Update()

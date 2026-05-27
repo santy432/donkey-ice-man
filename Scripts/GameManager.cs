@@ -134,13 +134,12 @@ namespace ProyectoSDL2.Engine.Scripts
             switch (CurrentState)
             {
                 case GAME_STATE.START:
-                    // Pantalla Inicio
+                    // Pantalla inicio
                     Engine.DrawText("DONKEY ICE MAN", 350, 200, 255, 255, 255, uiFont);
                     Engine.DrawText("Presiona ENTER para jugar", 250, 400, 255, 255, 255, uiFont);
                     break;
 
                 case GAME_STATE.GAMEPLAY:
-                    // Renderizamos los GameObjects SOLO si estamos jugando
                     for (int i = 0; i < GameObjects.Count; i++)
                     {
                         if (GameObjects[i].IsActive)
