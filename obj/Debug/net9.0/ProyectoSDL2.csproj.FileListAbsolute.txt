@@ -482,3 +482,6 @@ C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\obj\Debug\net9.0\Proyec
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\obj\Debug\net9.0\ref\ProyectoSDL2.dll
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\tank_enemy.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\hammer.png
+D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\hammer.png
+D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\tank_enemy.png
+D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\speed.png

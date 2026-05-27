@@ -52,6 +52,9 @@
       <None Update="assets\Ship\Idle\3.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="assets\speed.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="assets\tank_enemy.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>

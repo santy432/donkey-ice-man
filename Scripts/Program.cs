@@ -11,6 +11,7 @@ namespace ProyectoSDL2.Engine.Scripts
         static List<Portal> portalList = new List<Portal>();
         static List<TankEnemy> tankEnemyList = new List<TankEnemy>();
         static List<TankProjectile> tankProjectileList = new List<TankProjectile>();
+        static List<SpeedPowerUp> speedPowerUpList = new List<SpeedPowerUp>();
 
         public static List<TankEnemy> TankEnemyList => tankEnemyList;
         public static List<TankProjectile> TankProjectileList => tankProjectileList;
@@ -19,6 +20,7 @@ namespace ProyectoSDL2.Engine.Scripts
         public static List<Enemy> EnemyList => enemyList;
         public static List<Bullet> BulletList => bulletList;
         public static List<Portal> PortalList => portalList;
+        public static List<SpeedPowerUp> SpeedPowerUpList => speedPowerUpList;
 
 
         static float deltaTime;
@@ -40,19 +42,18 @@ namespace ProyectoSDL2.Engine.Scripts
 
             player = new Player(100, 650);
 
-            enemyList.Add(new Enemy(200, 200));
-<<<<<<< Updated upstream
-            tankEnemyList.Add(new TankEnemy(200, 400));
-            enemyList.Add(new Enemy(200, 650));
-=======
+            tankEnemyList.Add(new TankEnemy(200, 150));
+
+            enemyList.Add(new Enemy(200, 150));
             enemyList.Add(new Enemy(200, 400));
-            enemyList.Add(new Enemy(200, 635));
->>>>>>> Stashed changes
+            enemyList.Add(new Enemy(200, 650));
 
             portalList.Add(new Portal(900, 650));
             portalList.Add(new Portal(100, 400));
             portalList.Add(new Portal(900, 400));
             portalList.Add(new Portal(100, 150));
+
+            speedPowerUpList.Add(new SpeedPowerUp(450, 400));
 
             while (!player.IsDead())
             {
@@ -76,6 +77,7 @@ namespace ProyectoSDL2.Engine.Scripts
             player.Update();
 
             CheckPortalCollision();
+            CheckSpeedPowerUpCollision();
 
 
             for (int i = 0; i < enemyList.Count; i++)
@@ -98,7 +100,7 @@ namespace ProyectoSDL2.Engine.Scripts
             }
         }
 
-        static void CheckPortalCollision() 
+        static void CheckPortalCollision()
         {
             if (portalList.Count < 4)
                 return;
@@ -117,7 +119,7 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 player.SetPosition(portalB.PosX + 60, portalB.PosY);
             }
-                                                                    //Si la distancia entre el jugador y el portal es menor de 50, le cambia la posicion al jugador
+            //Si la distancia entre el jugador y el portal es menor de 50, le cambia la posicion al jugador
             // colision con portal B
             else if (Math.Abs(playerX - portalB.PosX) < 50 &&
                      Math.Abs(playerY - portalB.PosY) < 50)
@@ -137,6 +139,23 @@ namespace ProyectoSDL2.Engine.Scripts
                      Math.Abs(playerY - portalD.PosY) < 50)
             {
                 player.SetPosition(portalC.PosX - 60, portalC.PosY);
+            }
+        }
+
+        static void CheckSpeedPowerUpCollision()
+        {
+            for (int i = 0; i < speedPowerUpList.Count; i++)
+            {
+                SpeedPowerUp powerUp = speedPowerUpList[i];
+
+                if (Math.Abs(player.PlayerTransform.PosX - powerUp.PosX) < 50 &&
+                    Math.Abs(player.PlayerTransform.PosY - powerUp.PosY) < 50)
+                {
+                    player.ActivateSpeedBoost(5f, 10); // (boost duration in seconds, boosted speed)
+
+                    speedPowerUpList.RemoveAt(i);
+                    i--;
+                }
             }
         }
 
@@ -169,6 +188,10 @@ namespace ProyectoSDL2.Engine.Scripts
                 tankProjectileList[i].Render();
             }
 
+            for (int i = 0; i < speedPowerUpList.Count; i++)
+            {
+                speedPowerUpList[i].Render();
+            }
 
             Engine.Show();
         }

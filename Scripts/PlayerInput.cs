@@ -40,5 +40,10 @@ namespace ProyectoSDL2.Engine.Scripts
             
             }
         }
+
+        public void UpdateSpeed(int newSpeed)
+        {
+            speed = newSpeed;
+        }
     }
 }
