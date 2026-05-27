@@ -1,30 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj": {}
+    "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj": {
+    "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj",
+        "projectUniqueName": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
         "projectName": "ProyectoSDL2",
-        "projectPath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj",
-        "packagesPath": "C:\\Users\\narut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\obj\\",
+        "projectPath": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
+        "packagesPath": "C:\\Users\\Joaquin\\.nuget\\packages\\",
+        "outputPath": "D:\\programacion\\DIM github\\donkey-ice-man\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\narut\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Joaquin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
-            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
@@ -39,11 +44,10 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
-          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "Sayers.SDL2.Core": {
@@ -67,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

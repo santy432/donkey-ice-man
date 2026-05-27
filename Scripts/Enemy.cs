@@ -24,7 +24,7 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             transform.Translate(speed, 0);
 
-            if (transform.PosX > 1000 || transform.PosX < 0)
+            if (transform.PosX > 800 || transform.PosX < 200)
             {
                 speed *= -1;
             }

@@ -41,8 +41,13 @@ namespace ProyectoSDL2.Engine.Scripts
             player = new Player(100, 650);
 
             enemyList.Add(new Enemy(200, 200));
+<<<<<<< Updated upstream
             tankEnemyList.Add(new TankEnemy(200, 400));
             enemyList.Add(new Enemy(200, 650));
+=======
+            enemyList.Add(new Enemy(200, 400));
+            enemyList.Add(new Enemy(200, 635));
+>>>>>>> Stashed changes
 
             portalList.Add(new Portal(900, 650));
             portalList.Add(new Portal(100, 400));
