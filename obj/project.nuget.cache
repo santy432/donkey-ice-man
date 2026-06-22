@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tP85jzBHyxA=",
+  "dgSpecHash": "RuuR+OZyaUY=",
   "success": true,
-  "projectFilePath": "D:\\Donkey Ice Man\\Donkey Ice Man\\donkey ice man\\ProyectoSDL2.csproj",
+  "projectFilePath": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\koki4\\.nuget\\packages\\sayers.sdl2.core\\1.0.11\\sayers.sdl2.core.1.0.11.nupkg.sha512"
+    "C:\\Users\\Joaquin\\.nuget\\packages\\sayers.sdl2.core\\1.0.11\\sayers.sdl2.core.1.0.11.nupkg.sha512"
   ],
   "logs": []
 }

@@ -53,23 +53,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\koki4\\.nuget\\packages\\": {},
+    "C:\\Users\\Joaquin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Donkey Ice Man\\Donkey Ice Man\\donkey ice man\\ProyectoSDL2.csproj",
+      "projectUniqueName": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
       "projectName": "ProyectoSDL2",
-      "projectPath": "D:\\Donkey Ice Man\\Donkey Ice Man\\donkey ice man\\ProyectoSDL2.csproj",
-      "packagesPath": "C:\\Users\\koki4\\.nuget\\packages\\",
-      "outputPath": "D:\\Donkey Ice Man\\Donkey Ice Man\\donkey ice man\\obj\\",
+      "projectPath": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
+      "packagesPath": "C:\\Users\\Joaquin\\.nuget\\packages\\",
+      "outputPath": "D:\\programacion\\DIM github\\donkey-ice-man\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\koki4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joaquin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -123,7 +123,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

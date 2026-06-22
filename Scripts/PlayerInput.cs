@@ -6,6 +6,8 @@ namespace ProyectoSDL2.Engine.Scripts
         Transform transform;
         int speed;
 
+        private bool isMoving;
+        public bool IsMoving => isMoving;
         float Timer = 0;    
 
         public PlayerInput(Transform playerTransform, int playerSpeed)
@@ -18,11 +20,14 @@ namespace ProyectoSDL2.Engine.Scripts
 
         public void Update()
         {
+            isMoving = false;
+
             Timer += Program.DeltaTime;
 
             if (Engine.KeyPress(Engine.KEY_A))
             {
                 transform.Translate(-1 * speed, 0);
+                isMoving = true;
 
                GameManager.Instance.Player.SetDirection(false);
             }
@@ -30,6 +35,7 @@ namespace ProyectoSDL2.Engine.Scripts
             if (Engine.KeyPress(Engine.KEY_D))
             {
                 transform.Translate(1 * speed, 0);
+                isMoving = true;
 
                 GameManager.Instance.Player.SetDirection(true);
             }

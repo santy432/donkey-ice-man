@@ -4,7 +4,8 @@
     {
 
         private PlayerInput input;
-        private Animation playerAnim;
+        private Animation walkRightAnim;
+        private Animation walkLeftAnim;
         private int speed = 5;
         private Health health;
 
@@ -18,14 +19,30 @@
 
         public bool FacingRight => facingRight;
 
+        private bool isMoving;
+
 
         public Player(int x, int y) : base(x, y)
         {
             input = new PlayerInput(transform, speed);
             health = new Health(5);
 
-            playerRight = Engine.LoadImage("assets/mario right.png");
-            playerLeft = Engine.LoadImage("assets/mario left.png");
+            List<Image> rightFrames = new List<Image>()
+            {
+                 Engine.LoadImage("assets/mario_right_1.png"),
+                 Engine.LoadImage("assets/mario_right_2.png"),
+                 Engine.LoadImage("assets/mario_right_3.png")
+            };
+
+            List<Image> leftFrames = new List<Image>()
+            {
+                Engine.LoadImage("assets/mario_left_1.png"),
+                Engine.LoadImage("assets/mario_left_2.png"),
+                Engine.LoadImage("assets/mario_left_3.png")
+            };
+
+            walkRightAnim = new Animation(rightFrames, 0.15f); // frames cambian cada 0.15
+            walkLeftAnim = new Animation(leftFrames, 0.15f);
 
         }
 
@@ -95,6 +112,14 @@
             {
                 Engine.Debug("Game Over");
             }
+
+            if (input.IsMoving)
+            {
+                if (facingRight)
+                    walkRightAnim.Update();
+                else
+                    walkLeftAnim.Update();
+            }
         }
 
         public bool IsDead() => health.IsDead();
@@ -103,11 +128,19 @@
         {
             if (facingRight)
             {
-                Engine.Draw(playerRight, transform.PosX, transform.PosY);
+                Engine.Draw(
+                    walkRightAnim.currentFrame,
+                    transform.PosX,
+                    transform.PosY
+                );
             }
             else
             {
-                Engine.Draw(playerLeft, transform.PosX, transform.PosY);
+                Engine.Draw(
+                    walkLeftAnim.currentFrame,
+                    transform.PosX,
+                    transform.PosY
+                );
             }
         }
 
