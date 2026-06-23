@@ -47,7 +47,7 @@ namespace ProyectoSDL2.Engine.Scripts
         // cuando se creaa una bala, se suma al gameManager
         public static void AddBullet(int posX, int posY, int direction)
         {
-            GameManager.Instance.AddObject(new Bullet(posX, posY, direction));
+            GameManager.Instance.GetBullet(posX, posY, direction);
         }
     }
 }

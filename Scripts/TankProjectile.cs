@@ -14,8 +14,13 @@ namespace ProyectoSDL2.Engine.Scripts
         float accumulatedY;
 
         //base(startPosX, startPosY) para que el padre inicialice el transform
-        public TankProjectile(int startPosX, int startPosY, int targetX, int targetY) : base(startPosX, startPosY)
+        public TankProjectile() : base(0, 0) { }
+
+        public void Reset(int startPosX, int startPosY, int targetX, int targetY)
         {
+            accumulatedX = 0; accumulatedY = 0;
+            transform.SetPosition(startPosX, startPosY);
+
             int dx = targetX - startPosX;
             int dy = targetY - startPosY;
             float gravity = 0.3f;
@@ -61,13 +66,13 @@ namespace ProyectoSDL2.Engine.Scripts
                 // damage a traves de gamemanager
                 GameManager.Instance.Player.TakeDamage(1);
 
-                this.IsActive = false;
+                GameManager.Instance.ReturnProjectile(this);
                 return;
             }
 
             if (transform.PosX < -100 || transform.PosX > 1200 || transform.PosY > 900 || transform.PosY < -200)
             {
-                this.IsActive = false;
+                GameManager.Instance.ReturnProjectile(this);
             }
         }
 

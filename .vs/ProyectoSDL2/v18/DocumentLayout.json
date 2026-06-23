@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\tankprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\tankenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\tankenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|solutionrelative:scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DABE7CE-A186-431F-BB46-DA9D6275E9B3}|ProyectoSDL2.csproj|c:\\users\\narut\\onedrive\\documentos\\github\\donkey-ice-man\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +70,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Scripts\\GameManager.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAUwMEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T23:42:51.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ObjectPool.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\ObjectPool.cs",
+              "RelativeDocumentMoniker": "Scripts\\ObjectPool.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\ObjectPool.cs",
+              "RelativeToolTip": "Scripts\\ObjectPool.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T23:40:58.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Health.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Health.cs",
               "RelativeDocumentMoniker": "Scripts\\Health.cs",
@@ -70,51 +104,37 @@
               "RelativeToolTip": "Scripts\\Health.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwD8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T02:27:34.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T02:27:34.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TankEnemy.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankEnemy.cs",
               "RelativeDocumentMoniker": "Scripts\\TankEnemy.cs",
               "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankEnemy.cs",
               "RelativeToolTip": "Scripts\\TankEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-27T02:02:59.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TankProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
-              "RelativeDocumentMoniker": "Scripts\\TankProjectile.cs",
-              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
-              "RelativeToolTip": "Scripts\\TankProjectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T01:48:17.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
               "RelativeDocumentMoniker": "Scripts\\Program.cs",
               "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Program.cs",
               "RelativeToolTip": "Scripts\\Program.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAuwK8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T17:30:15.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Scripts\\Enemy.cs",
@@ -122,12 +142,11 @@
               "RelativeToolTip": "Scripts\\Enemy.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAgwCEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:30:16.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:30:16.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Animation.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Animation.cs",
               "RelativeDocumentMoniker": "Scripts\\Animation.cs",
@@ -139,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Engine.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Engine\\Engine.cs",
               "RelativeDocumentMoniker": "Engine\\Engine.cs",
@@ -151,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "PlayerInput.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\PlayerInput.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerInput.cs",
@@ -163,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
@@ -171,12 +190,11 @@
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T17:30:16.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:30:16.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Transform.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Transform.cs",
               "RelativeDocumentMoniker": "Scripts\\Transform.cs",
@@ -189,15 +207,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Scripts\\Bullet.cs",
               "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Scripts\\Bullet.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwDAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAArwCkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T17:30:16.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TankProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
+              "RelativeDocumentMoniker": "Scripts\\TankProjectile.cs",
+              "ToolTip": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\Scripts\\TankProjectile.cs",
+              "RelativeToolTip": "Scripts\\TankProjectile.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:48:17.585Z",
               "EditorCaption": ""
             }
           ]

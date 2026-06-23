@@ -454,7 +454,6 @@ C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\Proyec
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\bullet.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\enemy.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\fondo.png
-C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\portal.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\ship.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\Ship\Idle\0.png
@@ -535,9 +534,15 @@ D:\Donkey Ice Man\Donkey Ice Man\donkey ice man\obj\Debug\net9.0\refint\Proyecto
 D:\Donkey Ice Man\Donkey Ice Man\donkey ice man\obj\Debug\net9.0\ProyectoSDL2.pdb
 D:\Donkey Ice Man\Donkey Ice Man\donkey ice man\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
 D:\Donkey Ice Man\Donkey Ice Man\donkey ice man\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+<<<<<<< Updated upstream
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_1.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_2.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_3.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_2.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_3.png
 D:\programacion\DIM github\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_1.png
+=======
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario left.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario right.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\speed.png
+>>>>>>> Stashed changes

@@ -53,13 +53,11 @@ namespace ProyectoSDL2.Engine.Scripts
 
         void Shoot()
         {
-            Transform playerTransform = GameManager.Instance.Player.Transform;
-            GameManager.Instance.AddObject(new TankProjectile(
-                    transform.PosX,
-                    transform.PosY,
-                    playerTransform.PosX,
-                    playerTransform.PosY
-                ));
+            Transform p = GameManager.Instance.Player.Transform;
+            GameManager.Instance.GetProjectile(
+                transform.PosX, transform.PosY,
+                p.PosX, p.PosY
+            );
         }
 
 

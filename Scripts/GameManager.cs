@@ -13,6 +13,9 @@ namespace ProyectoSDL2.Engine.Scripts
 
     public class GameManager
     {
+        private ObjectPool<Bullet> bulletPool;
+        private ObjectPool<TankProjectile> projectilePool;
+
         // Instancia privada del Singleton
         private static GameManager instance;
 
@@ -71,6 +74,9 @@ namespace ProyectoSDL2.Engine.Scripts
             AddObject(new Portal(100, 150, 'D'));// Portal D
 
             AddObject(new SpeedPowerUp(450, 400));
+
+            bulletPool = new ObjectPool<Bullet>(() => new Bullet(), initialSize: 20);
+            projectilePool = new ObjectPool<TankProjectile>(() => new TankProjectile(), initialSize: 10);
         }
 
         public void Update()
@@ -175,5 +181,27 @@ namespace ProyectoSDL2.Engine.Scripts
             }
             return false; // Todos fueron derrotados
         }
+
+
+        public Bullet GetBullet(int x, int y, int direction)
+        {
+            Bullet b = bulletPool.Get();
+            b.Reset(x, y, direction);
+            AddObject(b);  // solo si no está ya en la lista*
+            return b;
+        }
+
+        public void ReturnBullet(Bullet b) => bulletPool.Return(b);
+
+        public TankProjectile GetProjectile(int x, int y, int tx, int ty)
+        {
+            TankProjectile p = projectilePool.Get();
+            p.Reset(x, y, tx, ty);
+            AddObject(p);
+            return p;
+        }
+
+
+        public void ReturnProjectile(TankProjectile p) => projectilePool.Return(p);
     }
 }

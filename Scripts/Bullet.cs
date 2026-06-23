@@ -9,10 +9,14 @@ namespace ProyectoSDL2.Engine.Scripts
 
         //Constructor, se llama cuando se crea
         // Si la dirección es 1 sumamos 70 a X, sino, la dejamos normal. A la Y siempre le sumamos 10.
-        public Bullet(int startPosX, int startPosY, int bulletDirection)
-               : base(bulletDirection == 1 ? startPosX + 70 : startPosX, startPosY + 10)
+
+        public Bullet() : base(0, 0) { }
+
+        public void Reset(int startPosX, int startPosY, int bulletDirection)
         {
             direction = bulletDirection;
+            int realX = bulletDirection == 1 ? startPosX + 70 : startPosX;
+            transform.SetPosition(realX, startPosY + 10);
         }
 
         public override void Update()
@@ -37,7 +41,7 @@ namespace ProyectoSDL2.Engine.Scripts
                     if (obj is IDamageable damageableTarget)
                     {
                         damageableTarget.GetDamaged(1); // le hace daño (sea tank, enemy o algun jefe)
-                        this.IsActive = false;
+                        GameManager.Instance.ReturnBullet(this);
                         return; // salimos del bucle para que la bala no atraviese y dañe a dos juntos
                     }
                 }
