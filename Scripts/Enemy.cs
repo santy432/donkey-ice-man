@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class Enemy : GameObject, IDamageable
+    public class Enemy : GameObject, IDamageable, IEnemy
     {
         int speed = 3;
         Image playerImg;

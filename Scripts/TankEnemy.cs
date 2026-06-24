@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoSDL2.Engine.Scripts
 {
-    public class TankEnemy : GameObject, IDamageable
+    public class TankEnemy : GameObject, IDamageable,IEnemy
     {
         int health = 10;
         int speed = 1;

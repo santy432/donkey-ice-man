@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8TSwxpv870w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\narut\\.nuget\\packages\\sayers.sdl2.core\\1.0.11\\sayers.sdl2.core.1.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

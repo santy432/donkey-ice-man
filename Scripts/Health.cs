@@ -29,7 +29,7 @@ namespace ProyectoSDL2.Engine.Scripts
 
                 if (!obj.IsActive) continue;
 
-                if (obj is Enemy enemy)
+                if (obj is IEnemy enemy)
                 {
                     if (playerTransform.PosX < enemy.Transform.PosX + 64 &&
                         playerTransform.PosX + 64 > enemy.Transform.PosX &&
@@ -39,23 +39,6 @@ namespace ProyectoSDL2.Engine.Scripts
                         if (damageCooldown <= 0)
                         {
                             Engine.Debug("Jugador golpeado por enemigo");
-                            vida--;
-                            damageCooldown = damageCooldownMax;
-                            return true;
-                        }
-                    }
-                }
-
-                else if (obj is TankEnemy tankEnemy)
-                {
-                    if (playerTransform.PosX < tankEnemy.Transform.PosX + 64 &&
-                        playerTransform.PosX + 64 > tankEnemy.Transform.PosX &&
-                        playerTransform.PosY < tankEnemy.Transform.PosY + 99 &&
-                        playerTransform.PosY + 64 > tankEnemy.Transform.PosY)
-                    {
-                        if (damageCooldown <= 0)
-                        {
-                            Engine.Debug("Jugador golpeado por Tanque");
                             vida--;
                             damageCooldown = damageCooldownMax;
                             return true;
