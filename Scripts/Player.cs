@@ -21,11 +21,16 @@
 
         private bool isMoving;
 
+        public event Action OnDied;
+
 
         public Player(int x, int y) : base(x, y)
         {
             input = new PlayerInput(transform, speed);
             health = new Health(5);
+
+            health.OnDamaged += OnPlayerDamaged;
+
 
             List<Image> rightFrames = new List<Image>()
             {
@@ -44,6 +49,18 @@
             walkRightAnim = new Animation(rightFrames, 0.15f); // frames cambian cada 0.15
             walkLeftAnim = new Animation(leftFrames, 0.15f);
 
+        }
+
+        private void OnPlayerDamaged(int vidaRestante)
+        {
+            Engine.Debug($"Jugador recibió daño! Vida restante: {vidaRestante}");
+
+        }
+
+        private void OnPlayerDeath()
+        {
+            Engine.Debug("El jugador murió!");
+            OnDied?.Invoke();
         }
 
         public override void Update()

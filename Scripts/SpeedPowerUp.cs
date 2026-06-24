@@ -6,7 +6,8 @@ namespace ProyectoSDL2.Engine.Scripts
     public class SpeedPowerUp : GameObject
     {
         private Image image;
-
+        public event Action OnPickedUp;
+        
         public SpeedPowerUp(int x, int y) : base(x, y)
         {
             image = Engine.LoadImage("assets/speed.png");
@@ -23,7 +24,7 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 Engine.Debug("PowerUp Agarrado");
 
-                GameManager.Instance.Player.ActivateSpeedBoost(3f, 8);
+                OnPickedUp?.Invoke();
 
                 this.IsActive = false;
             }

@@ -53,38 +53,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Joaquin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
     "C:\\Users\\narut\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
-      "projectName": "ProyectoSDL2",
-      "projectPath": "D:\\programacion\\DIM github\\donkey-ice-man\\ProyectoSDL2.csproj",
-      "packagesPath": "C:\\Users\\Joaquin\\.nuget\\packages\\",
-      "outputPath": "D:\\programacion\\DIM github\\donkey-ice-man\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj",
       "projectName": "ProyectoSDL2",
       "projectPath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\ProyectoSDL2.csproj",
       "packagesPath": "C:\\Users\\narut\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< Updated upstream
-        "C:\\Users\\Joaquin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
         "C:\\Users\\narut\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -137,12 +118,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< Updated upstream
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
->>>>>>> Stashed changes
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\narut\\OneDrive\\Documentos\\GitHub\\donkey-ice-man\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

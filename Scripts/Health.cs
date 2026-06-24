@@ -13,10 +13,11 @@ namespace ProyectoSDL2.Engine.Scripts
         private float damageCooldown = 0f;
         private float damageCooldownMax = 1f;
 
-        public Health(int Vida)
-        {
-            vida = Vida;
-        }
+
+        public event Action<int> OnDamaged; 
+        public event Action OnDeath;
+
+        public Health(int vida) { this.vida = vida; }
 
         public bool Colision(Transform playerTransform)
         {
@@ -73,7 +74,11 @@ namespace ProyectoSDL2.Engine.Scripts
             {
                 vida -= dmg;
                 damageCooldown = damageCooldownMax;
-                Engine.Debug($"Jugador golpeado por proyectil! Vida: {vida}");
+                OnDamaged?.Invoke(vida);
+
+                if (vida <= 0){
+                    OnDeath?.Invoke();
+                }
             }
         }
     }

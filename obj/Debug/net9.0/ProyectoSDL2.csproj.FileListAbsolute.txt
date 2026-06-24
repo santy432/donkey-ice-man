@@ -546,3 +546,9 @@ C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario right.png
 C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\speed.png
 >>>>>>> Stashed changes
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_1.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_2.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_left_3.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_1.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_2.png
+C:\Users\narut\OneDrive\Documentos\GitHub\donkey-ice-man\bin\Debug\net9.0\assets\mario_right_3.png

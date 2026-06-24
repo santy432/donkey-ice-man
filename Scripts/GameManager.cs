@@ -52,19 +52,53 @@ namespace ProyectoSDL2.Engine.Scripts
             GameObjects.Add(obj);
         }
 
+        private void OnEnemyDied()
+        {
+            enemiesAlive--;
+            Engine.Debug($"Enemigo eliminado. Quedan: {enemiesAlive}");
+
+            if (enemiesAlive <= 0)
+                CurrentState = GAME_STATE.VICTORY;
+        }
+
         public void ResetGame()
         {
 
             GameObjects.Clear();
+            enemiesAlive = 0;
 
 
             Player = new Player(100, 650);
+            Player.OnDied += () => CurrentState = GAME_STATE.END;
             AddObject(Player);
 
-            AddObject(new TankEnemy(200, 150));
-            AddObject(new Enemy(200, 150));
-            AddObject(new Enemy(200, 400));
-            AddObject(new Enemy(200, 650));
+            var tank = new TankEnemy(200, 150);
+            tank.OnEnemyDied += OnEnemyDied;
+            AddObject(tank);
+            enemiesAlive++;
+
+
+
+            var enemy1 = new Enemy(200, 150);
+            enemy1.OnEnemyDied += OnEnemyDied;
+            enemiesAlive++;
+            AddObject(enemy1);
+
+
+
+            var enemy2 = new Enemy(200, 400);
+            enemy2.OnEnemyDied += OnEnemyDied;
+            enemiesAlive++;
+            AddObject(enemy2);
+
+
+            var enemy3 = new Enemy(200, 650);
+            enemy3.OnEnemyDied += OnEnemyDied;
+            enemiesAlive++;
+            AddObject(enemy3);
+
+
+
             //piso 1
             AddObject(new Portal(900, 650, 'A'));// Portal A
             //Piso 2
@@ -77,7 +111,17 @@ namespace ProyectoSDL2.Engine.Scripts
 
             bulletPool = new ObjectPool<Bullet>(() => new Bullet(), initialSize: 20);
             projectilePool = new ObjectPool<TankProjectile>(() => new TankProjectile(), initialSize: 10);
+
+            var speedPowerUp = new SpeedPowerUp(450, 400);
+            speedPowerUp.OnPickedUp += () =>
+            {
+                Player.ActivateSpeedBoost(7f, 8);
+                Engine.Debug("PowerUp recogido!");
+            };
+            AddObject(speedPowerUp);
         }
+
+        private int enemiesAlive = 0;
 
         public void Update()
         {
@@ -105,21 +149,8 @@ namespace ProyectoSDL2.Engine.Scripts
                                 GameObjects.RemoveAt(i);
                         }
 
-                        if (Player.IsDead())
-                            CurrentState = GAME_STATE.END;
                     }
 
-                    // Chequeamos si el jugador murio para pasar a GAME OVER
-                    if (Player != null && Player.IsDead())
-                    {
-                        CurrentState = GAME_STATE.END;
-                    }
-
-                    // Chequeamos si ganamos (cuando no quedan enemigos)
-                    if (Player != null && !CheckIfEnemiesExist())
-                    {
-                        CurrentState = GAME_STATE.VICTORY;
-                    }
                     break;
 
                 case GAME_STATE.END:
@@ -170,17 +201,7 @@ namespace ProyectoSDL2.Engine.Scripts
         }
 
         // Función que busca si queda algún Enemigo vivo en la lista
-        private bool CheckIfEnemiesExist()
-        {
-            foreach (var obj in GameObjects)
-            {
-                if (obj.IsActive && (obj is Enemy || obj is TankEnemy))
-                {
-                    return true; // Todavía hay enemigos vivos
-                }
-            }
-            return false; // Todos fueron derrotados
-        }
+
 
 
         public Bullet GetBullet(int x, int y, int direction)

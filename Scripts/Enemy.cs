@@ -10,6 +10,8 @@ namespace ProyectoSDL2.Engine.Scripts
 
         Font arialFont;
 
+        public event Action OnEnemyDied;
+
         public Enemy(int x, int y) : base(x, y)
         {
             playerImg = Engine.LoadImage("assets/enemy.png");
@@ -33,8 +35,8 @@ namespace ProyectoSDL2.Engine.Scripts
             Engine.Debug($"Queda {health} de vida");
             if (health <= 0)
             {
-                // desactivamos
                 this.IsActive = false;
+                OnEnemyDied?.Invoke();
             }
         }
 

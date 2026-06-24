@@ -17,6 +17,8 @@ namespace ProyectoSDL2.Engine.Scripts
         Image tankImg;
         Font arialFont;
 
+        public event Action OnEnemyDied;
+
         public TankEnemy(int x, int y) : base(x, y)
         {
             tankImg = Engine.LoadImage("assets/tank_enemy.png");
@@ -65,9 +67,11 @@ namespace ProyectoSDL2.Engine.Scripts
         public void GetDamaged(int dmg)
         {
             health -= dmg;
-            Engine.Debug($"TankEnemy queda {health} de vida");
             if (health <= 0)
+            {
                 this.IsActive = false;
+                OnEnemyDied?.Invoke();    
+            }
         }
 
         public override void Render()
