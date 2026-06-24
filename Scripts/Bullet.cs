@@ -10,7 +10,14 @@ namespace ProyectoSDL2.Engine.Scripts
         //Constructor, se llama cuando se crea
         // Si la dirección es 1 sumamos 70 a X, sino, la dejamos normal. A la Y siempre le sumamos 10.
 
-        public Bullet() : base(0, 0) { }
+        private List<GameObject> gameObjects;      // inyectado
+        private Action<Bullet> returnToPool;       // inyectado
+
+        public Bullet(List<GameObject> gameObjects, Action<Bullet> returnToPool) : base(0, 0)
+        {
+            this.gameObjects = gameObjects;
+            this.returnToPool = returnToPool;
+        }
 
         public void Reset(int startPosX, int startPosY, int bulletDirection)
         {
@@ -19,30 +26,24 @@ namespace ProyectoSDL2.Engine.Scripts
             transform.SetPosition(realX, startPosY + 10);
         }
 
+
         public override void Update()
         {
-            transform.Translate(5 * direction, 0); // direction es 1 cuando mira a la derecha y 2 cuando mira a la izquierda
+            transform.Translate(5 * direction, 0);
 
-            for (int i = 0; i < GameManager.Instance.GameObjects.Count; i++)
+            for (int i = 0; i < gameObjects.Count; i++)
             {
-                GameObject obj = GameManager.Instance.GameObjects[i];
-
-
-                // ignoramos bala o a objetos inactivos
+                GameObject obj = gameObjects[i];
                 if (!obj.IsActive || obj == this) continue;
 
-                // checkeo colisión general
-                if ((transform.PosX < obj.Transform.PosX + 60) &&
-                    (transform.PosX + 7 > obj.Transform.PosX) &&
-                    (transform.PosY < obj.Transform.PosY + 90) &&
-                    (transform.PosY + 26 > obj.Transform.PosY))
+                if (CollisionHelper.Overlaps(transform.PosX, transform.PosY, 7, 26,
+                                             obj.Transform.PosX, obj.Transform.PosY, 60, 90))
                 {
-                    // objeto con etiqueta iDamageable = hace daño
-                    if (obj is IDamageable damageableTarget)
+                    if (obj is IDamageable target)
                     {
-                        damageableTarget.GetDamaged(1); // le hace daño (sea tank, enemy o algun jefe)
-                        GameManager.Instance.ReturnBullet(this);
-                        return; // salimos del bucle para que la bala no atraviese y dañe a dos juntos
+                        target.GetDamaged(1);
+                        returnToPool(this);   
+                        return;
                     }
                 }
             }

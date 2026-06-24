@@ -17,10 +17,10 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             Transform playerTransform = GameManager.Instance.Player.Transform;
 
-            if (transform.PosX < playerTransform.PosX + 64 &&
-                transform.PosX + 30 > playerTransform.PosX &&
-                transform.PosY < playerTransform.PosY + 64 &&
-                transform.PosY + 30 > playerTransform.PosY)
+            if (CollisionHelper.Overlaps(
+                transform.PosX, transform.PosY, 30, 30,                // powerup: 30x30
+                playerTransform.PosX, playerTransform.PosY, 64, 64))   // player: 64x64
+
             {
                 Engine.Debug("PowerUp Agarrado");
 

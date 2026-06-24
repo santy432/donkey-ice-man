@@ -58,10 +58,9 @@ namespace ProyectoSDL2.Engine.Scripts
             // buscamos al jugador a traves de GameManager
             Transform playerTransform = GameManager.Instance.Player.Transform;
 
-            if (transform.PosX < playerTransform.PosX + 64 &&
-                transform.PosX + 20 > playerTransform.PosX &&
-                transform.PosY < playerTransform.PosY + 64 &&
-                transform.PosY + 20 > playerTransform.PosY)
+            if (CollisionHelper.Overlaps(
+                transform.PosX, transform.PosY, 20, 20,              // projectile size 20x20
+                playerTransform.PosX, playerTransform.PosY, 64, 64)) //player size 64x64
             {
                 // damage a traves de gamemanager
                 GameManager.Instance.Player.TakeDamage(1);

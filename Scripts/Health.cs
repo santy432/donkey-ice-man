@@ -31,10 +31,10 @@ namespace ProyectoSDL2.Engine.Scripts
 
                 if (obj is IEnemy enemy)
                 {
-                    if (playerTransform.PosX < enemy.Transform.PosX + 64 &&
-                        playerTransform.PosX + 64 > enemy.Transform.PosX &&
-                        playerTransform.PosY < enemy.Transform.PosY + 99 &&
-                        playerTransform.PosY + 64 > enemy.Transform.PosY)
+                    if (CollisionHelper.Overlaps(
+                        playerTransform.PosX, playerTransform.PosY, 64, 64,   // player: 64x64
+                        enemy.Transform.PosX, enemy.Transform.PosY, 64, 99))  // enemy: 64x99
+
                     {
                         if (damageCooldown <= 0)
                         {

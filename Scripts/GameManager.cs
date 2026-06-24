@@ -72,27 +72,27 @@ namespace ProyectoSDL2.Engine.Scripts
             Player.OnDied += () => CurrentState = GAME_STATE.END;
             AddObject(Player);
 
-            var tank = new TankEnemy(200, 150);
+            var tank = (TankEnemy)EnemyFactory.Create(EnemyType.Tank, 200, 150);
             tank.OnEnemyDied += OnEnemyDied;
             AddObject(tank);
             enemiesAlive++;
 
 
 
-            var enemy1 = new Enemy(200, 150);
+            var enemy1 = (Enemy)EnemyFactory.Create(EnemyType.Basic, 200, 150);
             enemy1.OnEnemyDied += OnEnemyDied;
             enemiesAlive++;
             AddObject(enemy1);
 
 
 
-            var enemy2 = new Enemy(200, 400);
+            var enemy2 = (Enemy)EnemyFactory.Create(EnemyType.Basic, 200, 400);
             enemy2.OnEnemyDied += OnEnemyDied;
             enemiesAlive++;
             AddObject(enemy2);
 
 
-            var enemy3 = new Enemy(200, 650);
+            var enemy3 = (Enemy)EnemyFactory.Create(EnemyType.Basic, 200, 650);
             enemy3.OnEnemyDied += OnEnemyDied;
             enemiesAlive++;
             AddObject(enemy3);
@@ -109,7 +109,7 @@ namespace ProyectoSDL2.Engine.Scripts
 
             AddObject(new SpeedPowerUp(450, 400));
 
-            bulletPool = new ObjectPool<Bullet>(() => new Bullet(), initialSize: 20);
+            bulletPool = new ObjectPool<Bullet>(() => new Bullet(GameObjects, ReturnBullet),initialSize: 20 );
             projectilePool = new ObjectPool<TankProjectile>(() => new TankProjectile(), initialSize: 10);
 
             var speedPowerUp = new SpeedPowerUp(450, 400);
@@ -208,11 +208,12 @@ namespace ProyectoSDL2.Engine.Scripts
         {
             Bullet b = bulletPool.Get();
             b.Reset(x, y, direction);
-            AddObject(b);  // solo si no está ya en la lista*
+            AddObject(b);
             return b;
         }
 
         public void ReturnBullet(Bullet b) => bulletPool.Return(b);
+
 
         public TankProjectile GetProjectile(int x, int y, int tx, int ty)
         {
