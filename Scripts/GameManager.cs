@@ -139,6 +139,8 @@ namespace ProyectoSDL2.Engine.Scripts
                 case GAME_STATE.GAMEPLAY:
                     // Recorremos la lista de atrás hacia adelante (Count - 1 hasta 0).
                     // Esto evita errores logicos si eliminamos un objeto en medio del ciclo.
+                    if (Player.IsDead())
+                        CurrentState = GAME_STATE.END;
                     if (Player != null)
                     {
                         for (int i = GameObjects.Count - 1; i >= 0; i--)
@@ -154,6 +156,7 @@ namespace ProyectoSDL2.Engine.Scripts
                     break;
 
                 case GAME_STATE.END:
+
 
                 case GAME_STATE.VICTORY:
                     // Si perdimos o ganamos, al presionar R volvemos al menu principal

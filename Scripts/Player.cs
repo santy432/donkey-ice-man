@@ -30,6 +30,7 @@
             health = new Health(5);
 
             health.OnDamaged += OnPlayerDamaged;
+            health.OnDeath += OnPlayerDeath;
 
 
             List<Image> rightFrames = new List<Image>()
